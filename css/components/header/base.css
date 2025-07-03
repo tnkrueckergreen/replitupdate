@@ -1,0 +1,119 @@
+/* Base header styles */
+.main-header {
+    height: 96px; 
+    background-color: var(--color-bg); 
+    border-bottom: 1px solid var(--color-border);
+    padding: 0; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+}
+
+.nav-container { 
+    height: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1280px; 
+    padding: 0 40px; 
+    margin: 0 auto; 
+    gap: 1.5rem; /* MODIFIED: Reduced gap from 2rem to give nav more space */
+}
+
+.logo { 
+    font-family: var(--font-serif); 
+    font-weight: 700; 
+    font-size: 32px; 
+    color: var(--color-dark); 
+}
+
+.header-center-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 0; /* ADDED: This helps flexbox behavior in tight spaces */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0; /* Prevent header-right from shrinking */
+}
+
+.mobile-toggle { 
+    display: none; 
+    cursor: pointer; 
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--color-dark);
+    padding: 8px;
+    margin: -8px;
+    touch-action: manipulation; /* Better touch responsiveness */
+}
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 1220px) {
+    .mobile-toggle { 
+        display: block; 
+    }
+    
+    body.search-active .mobile-toggle { 
+        display: none; 
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        height: 80px;
+    }
+    
+    .nav-container { 
+        padding: 0 15px; 
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    .mobile-toggle {
+        display: block !important;
+        font-size: 1.8rem;
+        padding: 10px;
+        margin-right: -10px;
+    }
+    
+    .header-right .button-primary { 
+        display: block; 
+    }
+    
+    body.search-active .logo { 
+        display: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        height: 60px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .nav-container {
+        padding: 0 10px;
+        gap: 0.5rem;
+    }
+    
+    .header-right {
+        gap: 8px;
+    }
+    
+    .mobile-toggle {
+        font-size: 1.5rem;
+        padding: 8px;
+        margin-right: -8px;
+    }
+}

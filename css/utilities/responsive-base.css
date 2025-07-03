@@ -1,0 +1,41 @@
+/* ========================================
+   BASE RESPONSIVE UTILITIES
+   Core responsive foundations that apply globally
+   ======================================== */
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Ensure all elements use border-box */
+* {
+    box-sizing: border-box;
+}
+
+/* Responsive media defaults */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container responsive widths */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+        width: 100%;
+    }
+    
+    .page-content,
+    .section-content {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+}

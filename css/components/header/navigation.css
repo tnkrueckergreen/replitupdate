@@ -1,0 +1,87 @@
+/* Main navigation styles */
+/* MODIFIED: Use the direct child selector '>' to only target the top-level ul */
+.main-nav > ul { 
+    display: flex; 
+    list-style: none; 
+    gap: 32px; 
+}
+
+.main-nav li { 
+    margin: 0; 
+}
+
+.main-nav a { 
+    font-size: 16px; 
+    font-weight: 500; 
+    border-bottom: 2px solid transparent; 
+    padding: 4px 0; 
+}
+
+.main-nav a.active-link, 
+.main-nav a:hover { 
+    color: var(--color-brand-green); 
+    border-bottom-color: var(--color-brand-green); 
+}
+
+/* ADDED: Hide the mobile-only toggle button by default on all screen sizes. */
+.submenu-toggle {
+    display: none;
+}
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 1220px) {
+    .main-nav { 
+        display: none; 
+    }
+    
+    .main-nav > ul { 
+        gap: 24px; 
+    }
+    
+    /* Mobile accordion menu styles */
+    .main-header.nav-open .main-nav {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-bg);
+        padding: 1rem 0;
+        border-top: 1px solid var(--color-border);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    
+    .main-header.nav-open .main-nav ul { 
+        flex-direction: column; 
+        width: 100%; 
+        gap: 0; 
+    }
+    
+    .main-header.nav-open .main-nav li { 
+        margin: 0; 
+        text-align: left; 
+        border-bottom: 1px solid var(--color-border); 
+    }
+    
+    .main-header.nav-open .main-nav li:first-child { 
+        border-top: 1px solid var(--color-border); 
+    }
+    
+    .main-header.nav-open .main-nav a { 
+        padding: 1rem 1.5rem; 
+        display: block; 
+        border-bottom: none; 
+    }
+    
+    .main-header.nav-open .submenu-toggle {
+        display: inline-block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--color-text-secondary);
+        line-height: 1;
+    }
+}

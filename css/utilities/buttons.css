@@ -1,0 +1,28 @@
+/* Button utilities */
+.button-primary {
+    background-color: var(--color-brand-green);
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 9999px;
+    font-weight: 500; 
+    font-size: 15px; 
+    transition: opacity 0.2s ease-in-out;
+    border: none; 
+    cursor: pointer;
+}
+
+.button-primary:hover { 
+    opacity: 0.9; 
+}
+
+.header-action-btn {
+    background: none; 
+    border: none; 
+    cursor: pointer;
+    padding: 8px; 
+    color: var(--color-text-secondary);
+}
+
+.header-action-btn:hover { 
+    color: var(--color-dark); 
+}

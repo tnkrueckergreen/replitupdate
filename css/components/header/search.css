@@ -1,0 +1,113 @@
+/* Header search styles */
+.header-search-container {
+    display: none;
+    width: 100%;
+}
+
+/* MODIFIED: Use flexbox to align input and button */
+#header-search-form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* MODIFIED: Use flex-grow instead of width */
+#header-search-input {
+    flex-grow: 1; 
+    border: none; 
+    border-bottom: 1px solid var(--color-border);
+    background-color: transparent; 
+    font-size: 1rem; 
+    font-family: var(--font-sans);
+    color: var(--color-dark); 
+    padding: 0.5rem 2rem 0.5rem 0;
+}
+
+/* Hide default browser clear button */
+#header-search-input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+#header-search-input:focus { 
+    outline: none; 
+    border-bottom-color: var(--color-brand-green); 
+}
+
+/* Custom clear button */
+.header-search-clear-btn {
+    position: absolute;
+    right: 80px; /* Adjusted to make space for the Go button */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.header-search-clear-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.header-search-clear-btn:hover {
+    color: var(--color-dark);
+}
+
+/* ADDED: Styles for the new search button */
+.header-search-go-btn {
+    background-color: var(--color-brand-green);
+    color: white;
+    border: none;
+    padding: 0 16px;
+    height: 36px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+    flex-shrink: 0;
+}
+
+.header-search-go-btn:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+.header-search-go-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Search active state */
+body.search-active .main-nav { display: none; }
+body.search-active .header-search-container { display: block; }
+body.search-active .button-primary { display: none; }
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 768px) {
+    #header-search-container {
+        padding: 0 20px;
+    }
+    
+    #header-search-form {
+        padding: 10px 0;
+    }
+    
+    #search-icon-btn {
+        display: flex !important;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    #search-icon-btn {
+        padding: 6px;
+    }
+}

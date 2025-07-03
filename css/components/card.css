@@ -1,0 +1,22 @@
+/* --- UNIFIED LINKABLE CARD COMPONENT --- */
+
+.article-card-linkable {
+    position: relative; /* This is the anchor for the stretched link */
+    transition: transform 0.3s ease-in-out;
+}
+
+.article-card-linkable:hover {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.08));
+}
+
+/* The link that will be stretched */
+.article-card-linkable .stretched-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1; /* Ensures it's on top of other content in the card */
+}

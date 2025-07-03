@@ -1,0 +1,113 @@
+/* --- NEWS TICKER STYLES --- */
+.news-ticker-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ticker-label {
+    background-color: var(--color-brand-green);
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    margin-left: 40px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.ticker-wrap {
+    flex-grow: 1;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 20px, black 95%, transparent);
+}
+
+/* MODIFIED: The main UL is now a flex container for the two groups */
+#news-ticker-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: fit-content; /* Let the width be determined by its content */
+    animation: scroll-ticker 45s linear infinite;
+}
+
+/* ADDED: Style the new groups that hold the links */
+.ticker-group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Prevent the groups from shrinking */
+}
+
+/* MODIFIED: Target the links directly inside the groups */
+.ticker-group a {
+    display: block;
+    white-space: nowrap;
+    padding: 0 1.5rem;
+    color: var(--color-text-secondary);
+}
+
+.ticker-group a:hover {
+    color: var(--color-dark);
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.ticker-wrap:hover #news-ticker-list {
+    animation-play-state: paused;
+}
+
+/* MODIFIED: Keyframes now seamlessly loop by moving the container by 50% of its total width */
+@keyframes scroll-ticker {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /*
+         * This moves the entire container to the left by the width of one group.
+         * Since the second group is identical and follows immediately, the animation
+         * can loop back to the start without a visible jump.
+        */
+        transform: translateX(-50%);
+    }
+}
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 768px) {
+    .news-ticker-container {
+        padding: 0.8rem 0;
+        font-size: 0.8rem;
+    }
+    
+    .ticker-label {
+        margin-left: 15px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
+    
+    .ticker-group a {
+        padding: 0 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .ticker-wrap {
+        overflow: hidden;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .ticker-label {
+        display: none;
+    }
+    
+    .ticker-group a {
+        font-size: 0.8rem;
+        padding: 0 0.75rem;
+    }
+}
