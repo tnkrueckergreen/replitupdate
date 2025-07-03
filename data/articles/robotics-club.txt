@@ -1,0 +1,10 @@
+Title: New Robotics Club Builds for a Brighter Future
+Author: Jacob Miller, Noah Patel, Olivia Chen
+Category: Community
+Date: OCT 30, 2024
+Tags: robotics, stem, clubs, engineering
+Display: featured
+Image: https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1935&auto=format&fit=crop
+Description: A look at the new club that is bringing hands-on engineering skills and competitive spirit to the tech wing.
+---
+<p>A new sound is buzzing in the tech wing after school: the sound of creation. The newly formed Andover Robotics Club is already making waves, with over 25 students meeting three times a week to design, build, and program their first competitive robot. Led by physics teacher Dr. Aris Thorne, the club aims to compete in the regional FIRST Robotics Competition this spring.</p><h3>Hands-On Learning</h3><p>\"This is about more than just robots,\" Dr. Thorne explains. \"It's about problem-solving, teamwork, and learning real-world engineering skills that aren't taught in a traditional classroom.\" The students are divided into teams for programming, mechanical design, and electrical wiring. Junior and programming lead, Samira Jones, added, \"It's amazing to write code and then see a physical machine execute it. It's the best kind of learning.\" The club is currently fundraising for parts and registration fees and is excited to showcase its creation to the school later this semester.</p>

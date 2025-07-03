@@ -1,0 +1,10 @@
+Title: Athlete Spotlight: Maria Rodriguez
+Author: Mason Williams
+Category: Sports
+Date: OCT 25, 2024
+Tags: sports, cross-country, athletics, spotlight
+Display: recent
+Image: https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1935&auto=format&fit=crop
+Description: The junior cross-country star remains undefeated and has her sights set on the state title.
+---
+<p>Junior Maria Rodriguez doesn't just run; she flies. The star of the girls' cross-country team has remained undefeated this season, shattering course records and leaving competitors in her dust. Her dedication is legendary among her teammates. Rodriguez is often the first to arrive at practice and the last to leave, logging extra miles on weekends.</p><h3>Mind Over Matter</h3><p>"Running is my sanctuary," Rodriguez says. "It's just me and the trail. The physical part is hard, but the mental game is everything." Her coach, Ms. Evans, agrees. "Maria has a level of focus I've rarely seen in a high school athlete. She visualizes every race, every hill." With the state championship just a few weeks away, all eyes are on Maria as she aims to bring home Andover's first individual state title in cross-country history.</p>
